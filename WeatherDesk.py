@@ -102,7 +102,7 @@ else:
         city_json = urlopen(city_json_url).read().decode('utf-8')
 
         city = json.loads(city_json)
-        city = city['city'].replace(' ', '%20')
+        city = city['postal'].replace(' ', '%20')
 
     except urllib.error.URLError:
 
